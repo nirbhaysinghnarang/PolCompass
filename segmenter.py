@@ -2,7 +2,7 @@ import spacy
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from constants import category_ideology_mapping
-from openai import  AsyncOpenAI
+from openai import AsyncOpenAI
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import seaborn as sns
@@ -11,7 +11,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import asyncio
 from dotenv import load_dotenv
 
-load_dotenv()  # This will load the environment variables from the .env file
 
 model = AutoModelForSequenceClassification.from_pretrained("manifesto-project/manifestoberta-xlm-roberta-56policy-topics-context-2024-1-1", trust_remote_code=True)
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-large")
